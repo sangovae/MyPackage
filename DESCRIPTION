@@ -4,7 +4,7 @@ Title: Vespa Invasion Vizualization
 Version: 0.1.0
 Author: Sanne Govaert
 Maintainer: Sanne Govaert <A.User@whereever.net>
-Description: Produce a map or bar chart per year of known observations of Asian hornets (Vespa velutina) in Flanders. They typically want to filter this information on a year range.
+Description: MyPackage produces a map or bar chart per year of known observations of Asian hornets (Vespa velutina) in Flanders. They typically want to filter this information on a year range.
     Create R code that allows:
     1. To define a year range (e.g. 2019-2021).
     2. To retrieve occurrences from the Global Biodiversity Information Facility (GBIF) for that year range of Vespa velutina in Flanders.
@@ -17,11 +17,15 @@ LazyData: true
 RoxygenNote: 7.3.0
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Imports: 
     dplyr,
-    ggmap,
     ggplot2,
     magrittr,
-    rgbif
+    rgbif,
+    rlang
+URL: https://github.com/sangovae/MyPackage
+BugReports: https://github.com/sangovae/MyPackage/issues
+Config/testthat/edition: 3
