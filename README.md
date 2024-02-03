@@ -20,33 +20,38 @@ Global Biodiversity Information Facility (GBIF).
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
 ``` r
 library(MyPackage)
-## basic example code
+data2017_2019 <- vespa_data(2017,2019)
+data2017_2019
+#> # A tibble: 678 × 113
+#>    key        scientificName  decimalLatitude decimalLongitude issues datasetKey
+#>    <chr>      <chr>                     <dbl>            <dbl> <chr>  <chr>     
+#>  1 2456495590 Vespa velutina…            51.2             2.96 cdc,c… 50c9509d-…
+#>  2 2239541852 Vespa velutina…            51.2             2.96 osiic  9a0b66df-…
+#>  3 2244281495 Vespa velutina…            51.0             3.11 cdc,c… 50c9509d-…
+#>  4 2244281625 Vespa velutina…            50.8             3.04 cdc    50c9509d-…
+#>  5 2269245719 Vespa velutina…            51.0             3.12 cdc    50c9509d-…
+#>  6 2366150820 Vespa velutina…            51.1             2.62 cdc,c… 50c9509d-…
+#>  7 2423221468 Vespa velutina…            51.2             3.53 cdc,c… 50c9509d-…
+#>  8 2239541773 Vespa velutina…            51.0             3.12 osiic  9a0b66df-…
+#>  9 2269431918 Vespa velutina…            50.8             3.04 osiic  9a0b66df-…
+#> 10 2239541849 Vespa velutina…            51.1             3.52 osiic  9a0b66df-…
+#> # ℹ 668 more rows
+#> # ℹ 107 more variables: publishingOrgKey <chr>, installationKey <chr>,
+#> #   hostingOrganizationKey <chr>, publishingCountry <chr>, protocol <chr>,
+#> #   lastCrawled <chr>, lastParsed <chr>, crawlId <int>, basisOfRecord <chr>,
+#> #   occurrenceStatus <chr>, taxonKey <int>, kingdomKey <int>, phylumKey <int>,
+#> #   classKey <int>, orderKey <int>, familyKey <int>, genusKey <int>,
+#> #   speciesKey <int>, acceptedTaxonKey <int>, acceptedScientificName <chr>, …
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+<img src="man/figures/README-bar chart-1.png" width="100%" />
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+    #> Scale for x is already present.
+    #> Adding another scale for x, which will replace the existing scale.
+    #> Scale for y is already present.
+    #> Adding another scale for y, which will replace the existing scale.
+    #> Warning: Removed 1 rows containing missing values (`geom_rect()`).
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+<img src="man/figures/README-map-1.png" width="100%" />

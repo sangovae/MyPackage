@@ -3,7 +3,7 @@
 \docType{data}
 \name{mapFlanders}
 \alias{mapFlanders}
-\title{Map of Flanders for data visualizaiotn}
+\title{Map of Flanders for data visualization}
 \format{
 A \code{\link[=ggmap]{ggmap()}}
 }
