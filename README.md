@@ -4,17 +4,19 @@
 # MyPackage
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/sangovae/MyPackage/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/sangovae/MyPackage/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
-The goal of MyPackage is to …
+The goal of MyPackage is to visualize the invasion of the invasive Asian
+hornet (<em>Vespa velutina</em>) in Flanders.
 
-## Installation
+MyPackage can produces maps or bar charts per year of known observations
+of Asian hornets (Vespa velutina) in Flanders.
 
-You can install the development version of MyPackage like so:
-
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
+The user defines the year range. Occurrences are retrieved from the
+Global Biodiversity Information Facility (GBIF).
 
 ## Example
 
