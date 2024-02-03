@@ -22,6 +22,7 @@ VignetteBuilder: knitr
 Imports: 
     dplyr,
     ggplot2,
+    lifecycle,
     magrittr,
     rgbif,
     rlang
