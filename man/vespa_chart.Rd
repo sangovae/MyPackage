@@ -7,7 +7,7 @@
 vespa_chart(data)
 }
 \arguments{
-\item{data}{A tibble created by the function \code{\link{vespa_data}}}
+\item{data}{A tibble created by the function \code{\link[=vespa_data]{vespa_data()}}}
 }
 \value{
 A bar chart of observations per year

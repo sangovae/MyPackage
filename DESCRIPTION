@@ -10,7 +10,6 @@ Description: MyPackage produces a map or bar chart per year of known observation
     2. To retrieve occurrences from the Global Biodiversity Information Facility (GBIF) for that year range of Vespa velutina in Flanders.
     3. To present the result as a map of observations.
     4. To present the result as a bar chart of observations per year.
-    Your code should be documented and tested. Your code should be maintained on GitHub.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -29,3 +28,4 @@ Imports:
 URL: https://github.com/sangovae/MyPackage
 BugReports: https://github.com/sangovae/MyPackage/issues
 Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)

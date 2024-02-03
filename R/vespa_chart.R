@@ -1,8 +1,8 @@
 #' @title Bar chart of observations per year
 #' @description
-#' \code{vespa_data} creates a bar chart of observations per year.
+#' `vespa_data` creates a bar chart of observations per year.
 #'
-#' @param data A tibble created by the function \code{\link{vespa_data}}
+#' @param data A tibble created by the function [vespa_data()]
 #'
 #' @return A bar chart of observations per year
 #' @export

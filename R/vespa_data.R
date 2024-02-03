@@ -7,7 +7,7 @@
 #' @param year1 The 4 digit year. A single year or lower number of the year range.
 #' @param year2 Optional. 4 digit year, higher number of the year range.
 #'
-#' @return A \code{\link{tibble}} with occurrences from GBIF for that year range of Vespa velutina in Flanders
+#' @return A [tibble()] with occurrences from GBIF for that year range of Vespa velutina in Flanders
 #' @export
 #'
 #' @importFrom rgbif occ_search
