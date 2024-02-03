@@ -12,7 +12,6 @@
 #'
 #' @importFrom rgbif occ_search
 #' @importFrom dplyr mutate
-#' @importFrom rlang .data
 #'
 #' @examples
 #' vespa_data(2019,2021)
@@ -26,12 +25,5 @@ vespa_data <- function(year1, year2 = NULL) {
                          limit = 200000, year = paste0(year1, ", ", year2))
   dat_tbl <- dat_gbif$data
 
-  # select columns of interest
-  dat <- dat_tbl %>%
-    dplyr::select(.data$species, .data$decimalLongitude, .data$decimalLatitude, .data$countryCode, .data$individualCount,
-                  .data$gbifID, .data$family, .data$taxonRank, .data$coordinateUncertaintyInMeters, .data$year, .data$month, .data$day, .data$eventDate,
-                  .data$basisOfRecord, .data$institutionCode, .data$datasetName) %>%
-    mutate(thedate = as.Date(substr(.data$eventDate, 1, 10)))
-
-  return(dat)
+  return(dat_tbl)
 }
