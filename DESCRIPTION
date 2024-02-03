@@ -21,6 +21,7 @@ Suggests:
 VignetteBuilder: knitr
 Imports: 
     dplyr,
+    ggmap,
     ggplot2,
     lifecycle,
     magrittr,
@@ -30,3 +31,5 @@ URL: https://github.com/sangovae/MyPackage
 BugReports: https://github.com/sangovae/MyPackage/issues
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 2.10)
