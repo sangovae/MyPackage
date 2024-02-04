@@ -33,11 +33,10 @@ vespa_map <- function(data) {
   vespa_map <- ggmap::ggmap(MyPackage::mapFlanders)+
     ggplot2::geom_point(data = dat_geo,
                         ggplot2::aes(x = .data$decimalLongitude, y = .data$decimalLatitude), size = 1, col = "red") +
-    ggplot2::scale_x_continuous(limits = c(2.5,6), expand = c(0, 0)) +
-    ggplot2::scale_y_continuous(limits = c(50.5,51.5), expand = c(0, 0))+
+    ggplot2::scale_x_continuous(limits = c(2.5,6), breaks = seq(2.5, 6, 0.25), expand = c(0, 0)) +
+    ggplot2::scale_y_continuous(limits = c(50.5,51.5), breaks = seq(50.5,51.5, 0.25),expand = c(0, 0))+
     ggplot2::xlab("Longitude") + ggplot2::ylab("Latitude")
 
   return(vespa_map)
 }
-
 
