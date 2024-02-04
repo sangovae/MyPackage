@@ -22,8 +22,7 @@
 #' ggtitle("Number of observations of Vespa velutina in Flanders during 2019-2021")}
 
 vespa_chart <- function(data) {
-  df <- data.frame(table(data$year))
-  fig <- df %>%
+  fig <- data.frame(table(data$year)) %>%
     ggplot2::ggplot(aes(x=.data$Var1, y = .data$Freq)) +
     ggplot2::geom_bar(position = 'dodge', stat='identity') +
     ggplot2::geom_text(aes(label=.data$Freq), position=ggplot2::position_dodge(width=0.9), vjust=-0.25)+
