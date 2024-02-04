@@ -45,12 +45,19 @@ data2019_2021
 #> #   familyKey <int>, genusKey <int>, speciesKey <int>, …
 ```
 
+``` r
+vespa_chart(data2019_2021)
+```
+
 <img src="man/figures/README-bar-chart-1.png" width="100%" />
 
-    #> Scale for x is already present.
-    #> Adding another scale for x, which will replace the existing scale.
-    #> Scale for y is already present.
-    #> Adding another scale for y, which will replace the existing scale.
-    #> Warning: Removed 1 rows containing missing values (`geom_rect()`).
+``` r
+vespa_map(data2019_2021)
+#> Scale for x is already present.
+#> Adding another scale for x, which will replace the existing scale.
+#> Scale for y is already present.
+#> Adding another scale for y, which will replace the existing scale.
+#> Warning: Removed 1 rows containing missing values (`geom_rect()`).
+```
 
 <img src="man/figures/README-map-1.png" width="100%" />

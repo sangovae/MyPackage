@@ -35,11 +35,11 @@ data2019_2021 <- vespa_data(2019,2021)
 data2019_2021
 ```
 
-```{r bar-chart, echo = FALSE}
+```{r bar-chart, echo = TRUE}
 vespa_chart(data2019_2021)
 ```
 
-```{r map, echo = FALSE}
+```{r map, echo = TRUE}
 vespa_map(data2019_2021)
 ```
 
