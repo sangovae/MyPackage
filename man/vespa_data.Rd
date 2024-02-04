@@ -7,7 +7,7 @@
 vespa_data(year1, year2 = NULL)
 }
 \arguments{
-\item{year1}{The 4 digit year. A single year or lower number of the year range.}
+\item{year1}{The 4 digit year, between 2017 and now. A single year or lower number of the year range.}
 
 \item{year2}{Optional. 4 digit year, higher number of the year range.}
 }
@@ -16,7 +16,9 @@ A \code{\link[=tibble]{tibble()}} with occurrences from GBIF for that year range
 }
 \description{
 code{vespa_data} retrieves occurrences from the Global Biodiversity Information Facility (GBIF) for
-a single year or year range of Vespa velutina in Flanders.
+a single year or year range of \emph{Vespa velutina} in Flanders.
+\emph{Vespa velutina} was first observed in 2017 in Flanders.
+Therefore, your year range should start at least at 2017 or later.
 }
 \examples{
 vespa_data(2019,2021)
