@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Sanne Govaert
 Maintainer: Sanne Govaert <A.User@whereever.net>
 Description: The goal of this package is to produce a map or bar chart per year of
-    known observations of Asian hornets *Vespa velutina* in Flanders, and you are able
+    known observations of Asian hornets Vespa velutina in Flanders, and you are able
     to filter this information on a year range.
 License: GPL-3
 Encoding: UTF-8
