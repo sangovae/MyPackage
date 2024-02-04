@@ -8,7 +8,6 @@
 #' @export
 #'
 #' @importFrom ggplot2 ggplot geom_bar aes xlab ylab
-#' @importFrom dplyr group_by select
 #' @importFrom rlang .data
 #'
 #' @examples
@@ -23,13 +22,10 @@
 #' ggtitle("Number of observations of Vespa velutina in Flanders during 2019-2021")}
 
 vespa_chart <- function(data) {
-
-  data_minimal <- data %>%
-    dplyr::select(.data$year)
-
-  vespa_barchart <- data_minimal %>%
-    dplyr::group_by(.data$year) %>%
+vespa_barchart <- data %>%
     ggplot2::ggplot(aes(x=as.factor(.data$year))) +
-    ggplot2::geom_bar()
+    ggplot2::geom_bar()+
+  ggplot2::xlab("Year") + ggplot2::ylab("Observations")
   return(vespa_barchart)
 }
+

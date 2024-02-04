@@ -10,6 +10,7 @@
 #' @importFrom ggmap ggmap
 #' @importFrom ggplot2 ggplot geom_point aes scale_x_continuous scale_y_continuous xlab ylab
 #' @importFrom dplyr filter
+#' @importFrom rlang .data
 #'
 #' @examples
 #' # First, create a tibble with observations with the function vespa_data
@@ -26,19 +27,17 @@ vespa_map <- function(data) {
 
   # remove records without coordinates
   dat_geo <- data%>%
-    dplyr::filter(!is.na(decimalLongitude))%>%
-    dplyr::filter(!is.na(decimalLatitude))
+    dplyr::filter(!is.na(.data$decimalLongitude))%>%
+    dplyr::filter(!is.na(.data$decimalLatitude))
 
   vespa_map <- ggmap::ggmap(MyPackage::mapFlanders)+
     ggplot2::geom_point(data = dat_geo,
-                        ggplot2::aes(x = decimalLongitude, y = decimalLatitude), size = 1, col = "red") +
+                        ggplot2::aes(x = .data$decimalLongitude, y = .data$decimalLatitude), size = 1, col = "red") +
     ggplot2::scale_x_continuous(limits = c(2.5,6), expand = c(0, 0)) +
     ggplot2::scale_y_continuous(limits = c(50.5,51.5), expand = c(0, 0))+
     ggplot2::xlab("Longitude") + ggplot2::ylab("Latitude")
 
-
   return(vespa_map)
-
 }
 
 
