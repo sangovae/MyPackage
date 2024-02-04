@@ -1,4 +1,4 @@
-#' @title Map of Flanders for data visualizaiotn
+#' @title Map of Flanders for data visualization
 #'
 #' @description This code retrieves a map of Flanders from Google,
 #' to use as a background for the geographical visualization of the invasion
@@ -6,10 +6,8 @@
 #'
 #' @format A [ggmap()]
 
-
-## code to prepare `DATASET` dataset goes here
-
 library(ggmap)
-mapFlanders <- get_map(location = c(4.3, 51.0950),  maptype = "terrain", source = "google", zoom = 8, scale = "auto")
+mapFlanders <- get_map(location = c(4.23, 51.0950),
+                       maptype = "terrain", source = "google", zoom = 8, scale = "auto")
 
 usethis::use_data(mapFlanders, overwrite = TRUE, compress = "xz")
