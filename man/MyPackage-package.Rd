@@ -6,7 +6,7 @@
 \alias{MyPackage-package}
 \title{MyPackage: Vespa Invasion Visualization}
 \description{
-The goal of this package is to produce a map or bar chart per year of known observations of Asian hornets *Vespa velutina* in Flanders, and you are able to filter this information on a year range.
+The goal of this package is to produce a map or bar chart per year of known observations of Asian hornets Vespa velutina in Flanders, and you are able to filter this information on a year range.
 }
 \seealso{
 Useful links:
