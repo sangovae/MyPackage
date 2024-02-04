@@ -4,9 +4,9 @@
 \name{MyPackage-package}
 \alias{MyPackage}
 \alias{MyPackage-package}
-\title{MyPackage: Vespa Invasion Vizualization}
+\title{MyPackage: Vespa Invasion Visualization}
 \description{
-MyPackage produces a map or bar chart per year of known observations of Asian hornets (Vespa velutina) in Flanders. They typically want to filter this information on a year range. Create R code that allows: 1. To define a year range (e.g. 2019-2021). 2. To retrieve occurrences from the Global Biodiversity Information Facility (GBIF) for that year range of Vespa velutina in Flanders. 3. To present the result as a map of observations. 4. To present the result as a bar chart of observations per year. Your code should be documented and tested. Your code should be maintained on GitHub.
+The goal of this package is to produce a map or bar chart per year of known observations of Asian hornets *Vespa velutina* in Flanders, and you are able to filter this information on a year range.
 }
 \seealso{
 Useful links:
