@@ -1,0 +1,66 @@
+---
+title: "Overview"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MyPackage)
+```
+
+This vignette gives an overview of the package `MyPackage`.
+
+The goal of this package is to produce a map or bar chart per year of known observations of Asian hornets *Vespa velutina* in Flanders, and you are able to filter this information on a year range.
+
+## 1. Functions 
+
+Three different functions are available.
+
+### 1.1 `vespa_data`
+
+`vespa_data` retrieves occurrences of *Vespa velutina* in Flanders from the the Global Biodiversity Information Facility (GBIF) for a given year range. It is also possible to retrieve the data for a single year. In case of a year range: the first parameter is the lower year, the second parameter is the higher year, e.g. 2017, 2019 (and NOT 2019, 2017). *Vespa velutina* was first observed in 2017 in Flanders. Therefore, your year range should start at least at 2017. 
+Keep in mind that retrieving data from GBIF takes time, especially when there are many occurrences.
+
+```{r}
+vespa_data(2019,2021)
+```
+
+### 1.2 `vespa_chart`
+
+`vespa_chart` creates a bar chart of observations per year. `vespa_chart` requires the parameter `data`, which is a `tibble` created by using the function `vespa_data`.
+
+### 1.3 `vespa_map`
+
+`vespa_map` creates a map of observationsin Flanders during a given year range. `vespa_map` requires the parameter `data`, which is a `tibble` created by using the function `vespa_data`. 
+
+
+## 2. Datasets
+
+In this package, two data files are available:
+
+### 2.1 `mapFlanders`
+
+`mapFlanders` is map of Flanders retrieved from Google. `vespa_map` uses it as background for the geographical visualization of the invasion of Asian hornets in Flanders.
+
+### 2.1 `vespadata_2019_2021`
+
+This package also includes 
+Create R code that allows:
+1. To define a year range (e.g. 2019-2021).
+2. To retrieve occurrences from the Global Biodiversity Information Facility (GBIF) for that
+year range of Vespa velutina in Flanders.
+3. To present the result as a map of observations.
+4. To present the result as a bar chart of observations per year.
+Your code should be documented and tested. Your code should be maintained on GitHub.
+
+
