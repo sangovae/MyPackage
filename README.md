@@ -9,11 +9,10 @@
 
 <!-- badges: end -->
 
-The goal of MyPackage is to visualize the invasion of the invasive Asian
-hornet (<em>Vespa velutina</em>) in Flanders.
+The goal of `MyPackage` is to visualize the invasion of the invasive
+Asian hornet *Vespa velutina* in Flanders.
 
-MyPackage can produces maps or bar charts per year of known observations
-of Asian hornets (Vespa velutina) in Flanders.
+`MyPackage` produces maps or bar charts per year of known observations.
 
 The user defines the year range. Occurrences are retrieved from the
 Global Biodiversity Information Facility (GBIF).
@@ -46,7 +45,7 @@ data2017_2019
 #> #   speciesKey <int>, acceptedTaxonKey <int>, acceptedScientificName <chr>, …
 ```
 
-<img src="man/figures/README-bar chart-1.png" width="100%" />
+<img src="man/figures/README-bar-chart-1.png" width="100%" />
 
     #> Scale for x is already present.
     #> Adding another scale for x, which will replace the existing scale.

@@ -20,9 +20,9 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-The goal of MyPackage is to visualize the invasion of the invasive Asian hornet (<em>Vespa velutina</em>) in Flanders.
+The goal of `MyPackage` is to visualize the invasion of the invasive Asian hornet *Vespa velutina* in Flanders.
 
-MyPackage can produces maps or bar charts per year of known observations of Asian hornets (Vespa velutina) in Flanders.
+`MyPackage` produces maps or bar charts per year of known observations.
 
 The user defines the year range. Occurrences are retrieved from the Global Biodiversity Information Facility (GBIF).
 
@@ -35,7 +35,7 @@ data2017_2019 <- vespa_data(2017,2019)
 data2017_2019
 ```
 
-```{r bar chart, echo = FALSE}
+```{r bar-chart, echo = FALSE}
 vespa_chart(data2017_2019)
 ```
 
