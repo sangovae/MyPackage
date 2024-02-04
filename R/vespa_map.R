@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @importFrom ggmap ggmap
-#' @importFrom ggplot2 ggplot geom_point aes scale_x_continuous scale_y_continuous xlab ylab
-#' @importFrom dplyr filter
+#' @importFrom ggplot2 ggplot geom_point aes scale_x_continuous scale_y_continuous xlab ylab scale_color_manual theme theme_bw element_blank element_text guides guide_legend
+#' @importFrom dplyr filter arrange
 #' @importFrom rlang .data
 #'
 #' @examples
@@ -31,11 +31,17 @@ vespa_map <- function(data) {
     dplyr::filter(!is.na(.data$decimalLatitude))
 
   vespa_map <- ggmap::ggmap(MyPackage::mapFlanders)+
-    ggplot2::geom_point(data = dat_geo,
-                        ggplot2::aes(x = .data$decimalLongitude, y = .data$decimalLatitude), size = 1, col = "red") +
+    ggplot2::geom_point(data = dat_geo %>% dplyr::arrange(.data$year),
+                        ggplot2::aes(x = .data$decimalLongitude, y = .data$decimalLatitude, col = as.factor(.data$year)), size = 1) +
     ggplot2::scale_x_continuous(limits = c(2.5,6), breaks = seq(2.5, 6, 0.25), expand = c(0, 0)) +
     ggplot2::scale_y_continuous(limits = c(50.5,51.5), breaks = seq(50.5,51.5, 0.25),expand = c(0, 0))+
-    ggplot2::xlab("Longitude") + ggplot2::ylab("Latitude")
+    ggplot2::xlab("Longitude") + ggplot2::ylab("Latitude") +
+    ggplot2::scale_color_manual(values = rev(c("#710000", "#A20000", "#D60000", "#ED2E40", "#FB6C73", "#FF9CA1", "#FFCACC"))) +
+    ggplot2::theme_bw() +
+    ggplot2::theme(legend.position = 'bottom',
+                   legend.title = ggplot2::element_blank(),
+                   legend.text = ggplot2::element_text(size=10)) +
+    ggplot2::guides(colour = ggplot2::guide_legend(override.aes = list(size=5)))
 
   return(vespa_map)
 }

@@ -31,15 +31,15 @@ The user defines the year range. Occurrences are retrieved from the Global Biodi
 
 ```{r example}
 library(MyPackage)
-data2017_2019 <- vespa_data(2017,2019)
-data2017_2019
+data2019_2021 <- vespa_data(2019,2021)
+data2019_2021
 ```
 
 ```{r bar-chart, echo = FALSE}
-vespa_chart(data2017_2019)
+vespa_chart(data2019_2021)
 ```
 
 ```{r map, echo = FALSE}
-vespa_map(data2017_2019)
+vespa_map(data2019_2021)
 ```
 
